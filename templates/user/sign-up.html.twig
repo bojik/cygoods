@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('user-sign-up') }}
+{% endblock %}
+
+{% block content_title %}
+    <h1>{{ 'signup_title'|trans }}</h1>
+{% endblock%}
+
+{% block content %}
+{{ form(signUpForm) }}
+{% endblock %}
